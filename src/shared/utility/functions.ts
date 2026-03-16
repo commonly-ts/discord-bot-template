@@ -7,7 +7,7 @@ import {
 	MessageComponentType,
 	TextChannel,
 } from "discord.js";
-import { interactionReply, SlashSubcommand } from "trivious";
+import { interactionReply, SlashSubcommandData } from "trivious";
 
 type AwaitResult<T extends MessageComponentType> =
 	| { ok: true; interaction: MappedInteractionTypes<boolean>[T] }
@@ -60,7 +60,7 @@ export async function collectComponent<T extends MessageComponentType>(args: {
 			await interactionReply({
 				flags: ["EphemeralReply", "FollowUp"],
 				interaction,
-				options: {
+				replyPayload: {
 					content: `Something went wrong! Failed to await message component, report this error to the developer.`,
 				},
 			});
@@ -78,7 +78,7 @@ export function listFormat(list: Iterable<string>) {
 }
 
 export function getOptionName(
-	command: SlashSubcommand,
+	command: SlashSubcommandData,
 	partial: string,
 	searchBy: "startsWith" | "includes" | "endsWith"
 ) {

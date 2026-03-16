@@ -1,7 +1,6 @@
 import { DataSource } from "typeorm";
 
-export const entities = {
-};
+export const entities = {};
 
 export const AppDataSource = new DataSource({
 	type: "postgres",
@@ -10,7 +9,6 @@ export const AppDataSource = new DataSource({
 	entities,
 });
 
-export const repositories = {
-} as const;
+export const repositories = {} as const;
 
 export default AppDataSource;

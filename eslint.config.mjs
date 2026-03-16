@@ -2,17 +2,19 @@ import eslint from "@eslint/js";
 import prettier from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
 import prettierPlugin from "eslint-plugin-prettier";
+import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(
+export default defineConfig([
 	{
-		ignores: ["dist/**", "node_modules/**", "*.min.js", "*.d.ts", "coverage/**"],
+		ignores: ["lib/**", "node_modules/**", ".d.ts", "eslint.config.mjs"],
 	},
 
 	eslint.configs.recommended,
-	...tseslint.configs.recommended,
-
+	...tseslint.configs.strict,
+	...tseslint.configs.stylistic,
 	prettier,
+
 	{
 		plugins: {
 			prettier: prettierPlugin,
@@ -21,41 +23,33 @@ export default tseslint.config(
 
 		rules: {
 			"prettier/prettier": "error",
-
-			"quotes": "off",
-			"semi": "off",
-			"indent": "off",
-			"@typescript-eslint/indent": "off",
-
-			"no-unused-vars": "off",
-			"@typescript-eslint/no-unused-vars": [
-				"error",
-				{ argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-			],
-
-			"@typescript-eslint/no-explicit-any": "off",
-			"@typescript-eslint/no-unnecessary-type-assertion": "error",
-
-			"no-useless-return": "error",
-
-			"no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-
-			"import/no-restricted-paths": [
+			"sort-imports": "off",
+			"import/order": [
 				"error",
 				{
-					zones: [
-						{
-							target: "./src",
-							from: "./src/shared/typings",
-							except: ["./src/shared/typings/index.ts"],
-						},
+					"groups": [
+						"builtin",
+						"external",
+						"internal",
+						"parent",
+						"sibling",
+						"index",
+						"object",
+						"type",
 					],
+					"newlines-between": "always",
+					"alphabetize": {
+						order: "asc",
+						caseInsensitive: true,
+					},
+					"distinctGroup": true,
 				},
 			],
-			"import/order": ["warn", { "newlines-between": "always-and-inside-groups" }],
+
 			"import/no-duplicates": "error",
-			"import/first": "error",
-			"import/newline-after-import": "error",
+
+			"no-useless-return": "error",
+			"@typescript-eslint/no-explicit-any": "off",
 		},
 	},
 
@@ -67,5 +61,5 @@ export default tseslint.config(
 				tsconfigRootDir: import.meta.dirname,
 			},
 		},
-	}
-);
+	},
+]);

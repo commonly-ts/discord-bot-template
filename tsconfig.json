@@ -17,19 +17,16 @@
 		"sourceMap": false,
 		"baseUrl": ".",
 		"paths": {
-			"@typings/*": ["src/shared/typings/*"],
-			"@typings": ["src/shared/typings/index.ts"],
+			"#src/*": ["src/*"],
 
-			"@app/*": ["src/app/*"],
+			"#app/*": ["src/app/*"],
+			"#db/*": ["src/db/*"],
+			"#db": ["src/db/index.ts"],
+			"#shared/*": ["src/shared/*"],
 
-			"@core/*": ["src/core/*"],
-
-			"@shared/*": ["src/shared/*"],
-			"@builders": ["src/shared/builders/index.ts"],
-			"@utility/*": ["src/shared/utility/*"],
-
-			"@db/*": ["src/db/*"],
-			"@db": ["src/db/index.ts"]
+			"#builders/*": ["src/shared/builders/*"],
+			"#typings/*": ["src/shared/typings/*"],
+			"#utility/*": ["src/shared/utility/*"]
 		},
 		"typeRoots": ["node_modules/@types"]
 	},
