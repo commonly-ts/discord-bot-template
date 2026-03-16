@@ -1,7 +1,7 @@
 ## Requirements
 
 - Node.js 18+ (20+ recommended)
-- [PNPM](https://pnpm.io/) package manager
+- [pnpm](https://pnpm.io/) package manager
 - Recommended basic TypeScript knowledge
 
 ## Quick start
