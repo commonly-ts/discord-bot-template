@@ -1,12 +1,10 @@
-import { ApplicationCommandType, SlashCommandSubcommandBuilder } from "discord.js";
-import { createActionRow, interactionReply, SlashSubcommandData } from "trivious";
+import { SlashCommandSubcommandBuilder } from "discord.js";
+import { createActionRow, createSubcommand, interactionReply } from "trivious";
 
-import builderExample from "../builder/builder.example";
+import builderExample from "../../builder/builder.example";
 
-export default {
+export default createSubcommand({
 	active: true,
-	commandType: ApplicationCommandType.ChatInput,
-	context: "SlashSubcommand",
 	data: new SlashCommandSubcommandBuilder()
 		.setName("subcommand")
 		.setDescription("This is a subcommand under a command!"),
@@ -20,4 +18,4 @@ export default {
 			},
 		});
 	},
-} satisfies SlashSubcommandData;
+});

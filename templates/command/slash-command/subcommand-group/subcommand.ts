@@ -1,10 +1,8 @@
-import { ApplicationCommandType, SlashCommandSubcommandBuilder } from "discord.js";
-import { interactionReply, SlashSubcommandData } from "trivious";
+import { SlashCommandSubcommandBuilder } from "discord.js";
+import { createSubcommand, interactionReply } from "trivious";
 
-export default {
+export default createSubcommand({
 	active: true,
-	commandType: ApplicationCommandType.ChatInput,
-	context: "SlashSubcommand",
 	data: new SlashCommandSubcommandBuilder()
 		.setName("subcommand")
 		.setDescription("This is a subcommand under a group!"),
@@ -15,4 +13,4 @@ export default {
 			replyPayload: { content: "Hello world, I'm in a subcommand group!" },
 		});
 	},
-} satisfies SlashSubcommandData<false, "group">;
+});
