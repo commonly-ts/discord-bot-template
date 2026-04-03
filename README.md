@@ -26,7 +26,7 @@ pnpm dev        # Run the bot locally
 # Production scripts
 pnpm redeploy		# Pull from origin, install dependencies, build, and reload the process
 pnpm start			# Start the process
-pnpm stop				# Stop the process
+pnpm stop       # Stop the process
 pnpm restart		# Restart the process
 pnpm reload			# Reload the process (zero downtime)
 ```
