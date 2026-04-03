@@ -1,7 +1,7 @@
 import { ContextMenuCommandBuilder } from "discord.js";
-import { createUserComponentCommand, interactionReply } from "trivious";
+import { createUserContextCommand, interactionReply } from "trivious";
 
-export default createUserComponentCommand({
+export default createUserContextCommand({
 	active: true,
 	flags: ["EphemeralReply"],
 	data: new ContextMenuCommandBuilder().setName("Do Thing"),

@@ -1,7 +1,7 @@
 import { ContextMenuCommandBuilder, ModalBuilder } from "discord.js";
-import { createMessageComponentCommand } from "trivious";
+import { createMessageContextCommand } from "trivious";
 
-export default createMessageComponentCommand({
+export default createMessageContextCommand({
 	active: true,
 	flags: ["ExpectModal"],
 	data: new ContextMenuCommandBuilder().setName("Do Thing"),
