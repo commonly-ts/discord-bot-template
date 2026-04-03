@@ -1,10 +1,9 @@
 import "dotenv/config";
 import "reflect-metadata";
 
+import { AppDataSource } from "@db";
 import { GatewayIntentBits } from "discord.js";
 import { TriviousClient } from "trivious";
-
-import { AppDataSource } from "#db";
 
 const client = new TriviousClient({
 	credentials: {

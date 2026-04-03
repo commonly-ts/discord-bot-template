@@ -1,10 +1,8 @@
-import { ApplicationCommandType, SlashCommandBuilder } from "discord.js";
-import { SlashCommandData } from "trivious";
+import { SlashCommandBuilder } from "discord.js";
+import { createSlashCommand } from "trivious";
 
-export default {
+export default createSlashCommand({
 	active: true,
-	commandType: ApplicationCommandType.ChatInput,
-	context: "SlashCommand",
 	flags: ["EphemeralReply", "DeferReply"],
 	data: new SlashCommandBuilder().setName("debug").setDescription("Debug commands"),
-} satisfies SlashCommandData;
+});

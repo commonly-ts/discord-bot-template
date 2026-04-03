@@ -17,16 +17,14 @@
 		"sourceMap": false,
 		"baseUrl": ".",
 		"paths": {
-			"#src/*": ["src/*"],
+			"@app/*": ["src/app/*"],
+			"@db/*": ["src/db/*"],
+			"@db": ["src/db/index.ts"],
+			"@shared/*": ["src/shared/*"],
 
-			"#app/*": ["src/app/*"],
-			"#db/*": ["src/db/*"],
-			"#db": ["src/db/index.ts"],
-			"#shared/*": ["src/shared/*"],
-
-			"#builders/*": ["src/shared/builders/*"],
-			"#typings/*": ["src/shared/typings/*"],
-			"#utility/*": ["src/shared/utility/*"]
+			"@builders/*": ["src/shared/builders/*"],
+			"@typings/*": ["src/shared/typings/*"],
+			"@utility/*": ["src/shared/utility/*"]
 		},
 		"typeRoots": ["node_modules/@types"]
 	},
