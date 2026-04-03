@@ -2,9 +2,11 @@
 
 - Node.js 18+ (20+ recommended)
 - [pnpm](https://pnpm.io/) package manager
+- [pm2](https://pm2.keymetrics.io/) process manager
 - Recommended basic TypeScript knowledge
 
 ## Quick start
+
 ```bash
 git clone https://github.com/commonly-ts/discord-bot-template.git
 cd discord-bot-template
