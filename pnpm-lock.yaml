@@ -18,8 +18,8 @@ importers:
         specifier: ^0.2.2
         version: 0.2.2
       trivious:
-        specifier: ^2.1.6
-        version: 2.1.6
+        specifier: ^2.1.7
+        version: 2.1.7
       typeorm:
         specifier: ^0.3.28
         version: 0.3.28(pg@8.20.0)
@@ -2908,8 +2908,8 @@ packages:
     resolution: {integrity: sha512-aXJDbk6SnumuaZSANd21XAo15ucCDE38H4fkqiGsc3MhCK+wOlZvLP9cB/TvpHT0mOyWgC4Z8EwRlzqYSUzdsA==}
     engines: {node: '>= 0.4'}
 
-  trivious@2.1.6:
-    resolution: {integrity: sha512-W3O//3oVuY9Rsa5iRo1KcArBGo/XMjNoyZ7kJy+g4RrEWD9SeJ5HiVs+ur8gk9f+pjByBSG/UxDJFxBcokdM+w==}
+  trivious@2.1.7:
+    resolution: {integrity: sha512-mTDg+kRAEaUqC6zzeqFsIP8XQVVNMzhSX+Jrb6ZUoBjgPdBaqFRc4253gZ9ewwdrb7HmzzxoLqayKfPDeoV04A==}
 
   ts-api-utils@2.5.0:
     resolution: {integrity: sha512-OJ/ibxhPlqrMM0UiNHJ/0CKQkoKF243/AEmplt3qpRgkW8VG7IfOS41h7V8TjITqdByHzrjcS/2si+y4lIh8NA==}
@@ -6212,7 +6212,7 @@ snapshots:
 
   traverse@0.6.8: {}
 
-  trivious@2.1.6:
+  trivious@2.1.7:
     dependencies:
       discord.js: 14.26.0
     transitivePeerDependencies:
