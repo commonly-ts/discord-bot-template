@@ -48,7 +48,7 @@
 		"discord.js": "^14.25.1",
 		"pg": "^8.17.1",
 		"reflect-metadata": "^0.2.2",
-		"trivious": "^2.1.6",
+		"trivious": "^2.1.8",
 		"typeorm": "^0.3.28"
 	}
 }
