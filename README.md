@@ -1,6 +1,6 @@
 ## Requirements
 
-- Node.js 18+ (20+ recommended)
+- Node.js 22+
 - [pnpm](https://pnpm.io/) package manager
 - [pm2](https://pm2.keymetrics.io/) process manager
 - Recommended basic TypeScript knowledge
@@ -24,7 +24,7 @@ pnpm build      # Build into lib/
 pnpm dev        # Run the bot locally
 
 # Production scripts
-pnpm redeploy   # Pull from origin, install dependencies, build, and reload the process
+pnpm redeploy   # Pull from origin, install dependencies, and build
 pnpm start		# Start the process
 pnpm stop       # Stop the process
 pnpm restart	# Restart the process
