@@ -17,14 +17,15 @@
 		"sourceMap": false,
 		"baseUrl": ".",
 		"paths": {
-			"@app/*": ["src/app/*"],
-			"@db/*": ["src/db/*"],
+			"@typings": ["src/shared/typings.ts"],
+			"@feature/*": ["src/features/*"],
+
 			"@db": ["src/db/index.ts"],
-			"@shared/*": ["src/shared/*"],
+			"@db/*": ["src/db/*"],
 
 			"@builders/*": ["src/shared/builders/*"],
-			"@typings/*": ["src/shared/typings/*"],
-			"@utility/*": ["src/shared/utility/*"]
+			"@utility/*": ["src/shared/utility/*"],
+			"@shared/*": ["src/shared/*"]
 		},
 		"typeRoots": ["node_modules/@types"]
 	},

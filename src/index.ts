@@ -11,8 +11,8 @@ const client = new TriviousClient({
 		tokenReference: "BOT_TOKEN",
 	},
 	intents: [GatewayIntentBits.Guilds],
-	ownerUserIds: ["424764032667484171"],
-	corePath: "core",
+	ownerUserIds: [],
+	corePath: "features",
 	commandHashConfig: {
 		enabled: true,
 		persistentDataPath: "data",

@@ -2,7 +2,7 @@ module.exports = {
 	apps: [
 		{
 			name: "discord-bot-template",
-			script: "lib/app/index.js",
+			script: "lib/index.js",
 
 			watch: false,
 			autorestart: true,
